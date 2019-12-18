@@ -80,10 +80,47 @@ void setup() {
   lc.setLed(0, currBallCol, currBallRow, true);
   Serial.begin(9600);
   randomSeed(analogRead(A5));
-  levelOne();
+  //levelOne();
   initDisplayBoard();
 }
 
+void left() {
+        prevBallRow = currBallRow;
+        prevBallCol = currBallCol;
+        currBallCol--;
+        currBallRow--;
+        Serial.println("--------===--------");
+        Serial.println("if spre stanga:");
+        Serial.println(prevBallRow);
+        Serial.println(prevBallCol); 
+}
+
+void right() {
+     prevBallRow = currBallRow;
+     prevBallCol = currBallCol;
+     currBallCol++;
+     currBallRow--;
+     Serial.println("--------===--------");
+     Serial.println("if spre dreapta :");
+     Serial.println(prevBallRow);
+     Serial.println(prevBallCol);
+}
+
+void straight() {
+     prevBallRow = currBallRow;
+     prevBallCol = currBallCol;
+     currBallRow--;
+     Serial.println("--------===--------");
+     Serial.println("if sus:");
+     Serial.println(prevBallRow);
+     Serial.println(prevBallCol); 
+}
+
+void down() {
+     prevBallRow = currBallRow;
+     prevBallCol = currBallCol;
+     currBallRow++; 
+}
 
 void loop() {
   // put your main code here, to run repeatedly:
@@ -94,15 +131,15 @@ void loop() {
   paddlePos = map(potValue, 0, 1023, 0, 7);
   if(currentPaddleTime - paddleTime >= moveInterval) {
     paddleTime = currentPaddleTime;
-  for (col = minCol; col < maxCol; col++) {
-    if(paddlePos == col) {
-      lc.setLed(0, col, maxRow - 1, true);
-      lc.setLed(0, col + 1, maxRow - 1, true);
-      delay(10); 
-    } else {
-      lc.setLed(0, col, maxRow - 1, false);
-    } 
-  }
+    for (col = minCol; col < maxCol; col++) {
+      if(paddlePos == col) {
+        lc.setLed(0, col, maxRow - 1, true);
+        lc.setLed(0, col + 1, maxRow - 1, true);
+        delay(10); 
+      } else {
+        lc.setLed(0, col, maxRow - 1, false);
+        }   
+    }
   }
   if(currentTime - previousTime >= gameSpeed) {
     previousTime = currentTime;
@@ -117,37 +154,24 @@ void loop() {
         Serial.println(prevBallRow);
         Serial.println(prevBallCol); 
     } else if(prevBallCol - currBallCol == 1) {
-        prevBallRow = currBallRow;
-        prevBallCol = currBallCol;
-        currBallCol--;
-        currBallRow--;
-        Serial.println("--------===--------");
-        Serial.println("if spre stanga:");
-        Serial.println(prevBallRow);
-        Serial.println(prevBallCol); 
+        if(currBallCol == 0) {
+          right();
+        } else {
+          left();
+        }
     } else if(prevBallCol - currBallCol == 0) {
-        prevBallRow = currBallRow;
-        prevBallCol = currBallCol;
-        currBallRow--;
-        Serial.println("--------===--------");
-        Serial.println("if sus:");
-        Serial.println(prevBallRow);
-        Serial.println(prevBallCol); 
-      //if(currBallCol - prevBallCol == 1
+        straight();
     } else {
-        prevBallRow = currBallRow;
-        prevBallCol = currBallCol;
-        currBallCol++;
-        currBallRow--;
-        Serial.println("--------===--------");
-        Serial.println("if spre dreapta :");
-        Serial.println(prevBallRow);
-        Serial.println(prevBallCol);
+        if(currBallCol == 7) {
+        left();      
+      } else {
+        right();
       }
-    }
+   }
   } 
-    lc.setLed(0, currBallCol, currBallRow, true);
+   lc.setLed(0, currBallCol, currBallRow, true);
 }    
 
+}
     
    
