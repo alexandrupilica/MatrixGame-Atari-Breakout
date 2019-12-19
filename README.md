@@ -1,16 +1,16 @@
 # MatrixGame-Atari-Breakout
 
-###HARDWARE: 
-*1 x Arduino Uno
-*1 x 8x8 LED Matrix 
-*1 x MAX7219 Driver 
-*1 x LCD Screen 
-*2 x Potentiometers
-*1 x Joystick 
-*2 x Breadboards 
-*Wires 
+###### HARDWARE: 
+-1 x Arduino Uno
+-1 x 8x8 LED Matrix 
+-1 x MAX7219 Driver 
+-1 x LCD Screen 
+-2 x Potentiometers
+-1 x Joystick 
+-2 x Breadboards 
+-Wires 
  
-###HOW TO PLAY: 
+###### HOW TO PLAY: 
 
 
 
