@@ -1,17 +1,20 @@
 # MatrixGame-Atari-Breakout
 
-###### HARDWARE: 
--1 x Arduino Uno
--1 x 8x8 LED Matrix 
--1 x MAX7219 Driver 
--1 x LCD Screen 
--2 x Potentiometers
--1 x Joystick 
--2 x Breadboards 
--Wires 
+##### HARDWARE: 
+- 1 x Arduino Uno
+- 1 x 8x8 LED Matrix 
+- 1 x MAX7219 Driver 
+- 1 x LCD Screen 
+- 2 x Potentiometers
+- 1 x Joystick 
+- 2 x Breadboards 
+- Wires 
  
-###### HOW TO PLAY: 
+##### HOW TO PLAY: 
 
+1. Select "Start Game" in the menu by pressing down on the joystick 
+2. The ball will leave the platform in a random direction towards the bricks and destroy each one it touches. 
+3. You have completed the level once every brick is destroyed. Each brick is worth 5 points. 
 
 
 
