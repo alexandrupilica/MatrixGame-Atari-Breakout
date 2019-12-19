@@ -1,6 +1,6 @@
 # MatrixGame-Atari-Breakout
 
-##### HARDWARE: 
+#### HARDWARE: 
 - 1 x Arduino Uno
 - 1 x 8x8 LED Matrix 
 - 1 x MAX7219 Driver 
@@ -10,7 +10,7 @@
 - 2 x Breadboards 
 - Wires 
  
-##### HOW TO PLAY: 
+#### HOW TO PLAY: 
 
 1. Select "Start Game" in the menu by pressing down on the joystick 
 2. The ball will leave the paddle in a random direction towards the bricks and destroy each one it touches. Each brick is worth 5 points.
@@ -23,7 +23,7 @@
 
 
 
-
+##### INITIAL DETAILS: 
 
 My game will simulate the famous game Atari Breakout, or as a more general name that's been adopted by other developers, Brick Breaker. We will use a 8x8 led matrix, of course representing the game elements, the paddle, the ball and the wall of bricks. The point of the game is to destroy all the bricks using the ball and also not letting the ball fall by catching it with the paddle. 
 
