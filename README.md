@@ -24,6 +24,8 @@
 #### LINK TO VIDEO ATTACHED HERE: 
 https://drive.google.com/file/d/18vfuIWMNbxqjcpDuQk_xDRmXD28RGAZF/view?usp=sharing
 
+I recommend downloading the video, Google Drive messed it up and the built-in player does not display it properly. 
+
 ##### INITIAL DETAILS: 
 
 My game will simulate the famous game Atari Breakout, or as a more general name that's been adopted by other developers, Brick Breaker. We will use a 8x8 led matrix, of course representing the game elements, the paddle, the ball and the wall of bricks. The point of the game is to destroy all the bricks using the ball and also not letting the ball fall by catching it with the paddle. 
